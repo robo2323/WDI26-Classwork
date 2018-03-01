@@ -1,0 +1,21 @@
+{
+   "extends": ["eslint:recommended"],    
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "rules": {
+      "strict": 0,
+      "no-console": "off",
+      "linebreak-style": "off",
+      "comma-dangle": "off",
+      "no-unused-vars": [
+        "error",
+        {
+          "vars": "local",
+          "args": "none"
+        }
+      ]
+    }
+  }
+  
