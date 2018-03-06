@@ -1,0 +1,49 @@
+body {
+  background: mediumaquamarine;
+}
+
+.box{
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  text-align: center; /*horizontal centering*/
+  line-height: 300px;/*sneaky vertical centering*/
+}
+
+.block{
+  display: block;
+}
+
+.inline{
+  display: inline;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.none{
+  display: none;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
+.spooky{
+  transition: all .5s;
+
+}
+.spooky span{
+  opacity: 0;
+  transition: all .5s;
+  
+}
+.spooky:hover{
+  transform: rotateZ(360deg);
+  
+}
+.spooky:hover span{
+  opacity: 1;
+}

@@ -1,0 +1,21 @@
+/* *{
+  box-sizing: border-box;
+} */
+
+body {
+  background: yellow;
+}
+
+.old {
+  width: 300px;
+  border: 1px solid black;
+  padding: 50px;
+}
+
+.new {
+  box-sizing: border-box;
+  margin: 20px 0 0 0;
+  width: 300px;
+  border: 1px solid black;
+  padding: 50px;
+}

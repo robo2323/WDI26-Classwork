@@ -1,0 +1,64 @@
+body {
+  background: mediumaquamarine;
+  color: rgb(250, 250, 250);
+  min-height: 2em;
+}
+
+.red {
+  background: tomato;
+  top: 275px;
+  right: 300px;
+}
+
+.green {
+  background: springgreen;
+  top: 300px;
+  right: 275px;
+}
+
+.blue {
+  background: dodgerblue;
+  top: 325px;
+  right: 250px;
+}
+
+.small {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(70, 70, 70);
+  border-radius: 3%;
+}
+
+.box {
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgb(70, 70, 70);
+  text-align: center; /*horizontal centering*/
+  line-height: 300px; /*sneaky vertical centering*/
+  border-radius: 3%;
+}
+
+.static {
+  position: static; /*static*/
+}
+
+.absolute {
+  position: absolute;
+  top: 300px;
+  right: 150px;
+}
+
+.fixed {
+  position: fixed;
+  top: 300px;
+  right: 150px;
+}
+
+.relative {
+  position: relative;
+  width: 900px;
+  height: 900px;
+  line-height: 900px;
+}
