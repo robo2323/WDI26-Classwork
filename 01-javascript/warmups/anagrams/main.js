@@ -22,4 +22,4 @@ const anagrams = {
   }
 };
 
-console.log(anagrams.detectAnagram('ooggle'));
+console.log(anagrams.detectAnagram('inlets'));
