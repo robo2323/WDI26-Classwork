@@ -1,0 +1,16 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.square {
+  width: 25px;
+  height: 25px;
+}
+
+#main{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}

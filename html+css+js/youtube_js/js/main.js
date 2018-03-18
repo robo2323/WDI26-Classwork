@@ -20,7 +20,7 @@
 //   );
 // });
 
-//jquery
+//zepto
 /*global $ */
 
 $('a').each(function() {
@@ -30,16 +30,15 @@ $('a').each(function() {
     .on('click', function(e) {
       e.preventDefault();
       const embedUrl = youtube.generateEmbedUrl($(this).attr('href'));
-      $('#player')
-        .hide('slow')
-        .show('slow', function() {
+      $('#player').animate({ opacity: 0 }, 500, 'ease-out', function() {
+        $(this).animate({ opacity: 1 }, 1000, 'ease-out', function() {
           $(this).html(
             `<iframe width='560' height='315' src='${embedUrl}' frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
           );
         });
+      });
     });
 });
-
 
 // var elem = document.querySelector('.pulse');
 // var animation = elem.animate({

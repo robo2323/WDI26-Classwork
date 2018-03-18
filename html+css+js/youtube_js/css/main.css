@@ -1,7 +1,4 @@
 #player {
-  transition: opacity 0.5s;
+opacity: 1;
 }
 
-.fadeout {
-  opacity: 0;
-}
