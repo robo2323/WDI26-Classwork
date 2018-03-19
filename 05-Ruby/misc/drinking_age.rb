@@ -15,9 +15,11 @@ desired_temp = gets.to_i
 
 if ac_works == 'no' && temp > desired_temp
   puts 'fix its hot!'
-elsif ac_works=='no' && temp < desired_temp
+elsif ac_works == 'no' && temp < desired_temp
   puts 'fix later'
 elsif ac_works == 'yes' && temp > desired_temp
   puts 'turn on'
 end
+
+# git
 
