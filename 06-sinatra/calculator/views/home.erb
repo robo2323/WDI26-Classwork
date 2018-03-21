@@ -1,14 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Crappy Calculator</title>
-</head>
-<body>
+<form action="/calc">
+  <label for="">1st Number</label>
+  <input type="number" placeholder="enter a number" name="x">
 
-<h1>Calculator</h1>
+  <label for="">Operation</label>
+  <input type="text" placeholder="enter + - / or *" name="operator">
 
-</body>
-</html>
+  <label for="">2nd Number</label>
+  <input type="number" placeholder="enter a number" name="y">
+
+  <button>Calculate</button>
+</form>

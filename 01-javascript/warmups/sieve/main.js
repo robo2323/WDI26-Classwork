@@ -42,3 +42,5 @@ const graphSieve = (upTo) => {
 };
 
 graphSieve(100);
+
+

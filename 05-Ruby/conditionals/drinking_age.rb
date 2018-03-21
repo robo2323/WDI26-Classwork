@@ -21,5 +21,4 @@ elsif ac_works == 'yes' && temp > desired_temp
   puts 'turn on'
 end
 
-# git
 
