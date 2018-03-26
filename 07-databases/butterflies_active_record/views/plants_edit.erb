@@ -1,0 +1,11 @@
+<h2>Edit Plant</h2>
+
+<form method="post" action="/plants/<%= @plant.id %>">
+    <label for="">Name:</label>
+    <input type="text" name="name" placeholder="Plant name" value="<%= @plant.name%>">
+
+    <label for="">Name:</label>
+    <input type="url" name="image" placeholder="http://(image url)" value="<%= @plant.image%>">
+
+    <button>Update Plant</button>
+</form>

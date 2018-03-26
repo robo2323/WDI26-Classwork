@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc8497cc-8bc1-4d36-a57c-a1e71f79214b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../loops/guess_number.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/raindrops.rb" />
-      <change beforePath="$PROJECT_DIR$/../../01-javascript/warmups/sieve/main.js" afterPath="$PROJECT_DIR$/../../01-javascript/warmups/sieve/main.js" />
-      <change beforePath="$PROJECT_DIR$/../greeter.rb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../misc/.idea/misc.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../misc/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../misc/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../misc/.idea/vcs.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../misc/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../misc/drinking_age.rb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../misc/greeter.rb" afterPath="" />
-    </list>
+    <list default="true" id="61317386-f4db-48f4-bc1d-018081de7f71" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,15 +10,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/warmup@raindrops.coverage" NAME="raindrops Coverage Results" MODIFIED="1521501698670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="warmup" />
+    <SUITE FILE_PATH="coverage/queen_attack@queen_attack.coverage" NAME="queen_attack Coverage Results" MODIFIED="1522021520539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="queen_attack" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="raindrops.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/raindrops.rb">
+      <file leaf-file-name="queen_attack.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/queen_attack.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="760">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nucleotides.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../nucleotides/nucleotides.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="diff_two_squares.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../diff_two_square/diff_two_squares.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -42,22 +50,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Ruby rb" />
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bhjj.html" />
-        <option value="$PROJECT_DIR$/jhbjh.js" />
-        <option value="$PROJECT_DIR$/bhjjhb.css" />
-        <option value="$PROJECT_DIR$/raindrops.rb" />
+        <option value="$PROJECT_DIR$/queen_attack.rb" />
       </list>
     </option>
   </component>
@@ -67,9 +66,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="195" />
-    <option name="width" value="1092" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="87" />
+    <option name="width" value="640" />
     <option name="height" value="1049" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -79,18 +78,21 @@
           <State>
             <id />
           </State>
-        </expanded-state>
-        <selected-state>
           <State>
-            <id>Action Cable</id>
+            <id>CSS</id>
           </State>
-        </selected-state>
+          <State>
+            <id>Probable bugsCSS</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+        </expanded-state>
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -103,28 +105,13 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="warmup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="warmup" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../08-rails/movie_night" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -139,8 +126,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="raindrops" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
-      <module name="warmup" />
+    <configuration name="queen_attack" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="queen_attack" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
       <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
@@ -154,12 +141,12 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/raindrops.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/queen_attack.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
     </configuration>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Ruby.raindrops" />
+        <item index="0" class="java.lang.String" itemvalue="Ruby.queen_attack" />
       </list>
     </recent_temporary>
   </component>
@@ -169,41 +156,37 @@
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bc8497cc-8bc1-4d36-a57c-a1e71f79214b" name="Default" comment="" />
-      <created>1521499666744</created>
+      <changelist id="61317386-f4db-48f4-bc1d-018081de7f71" name="Default" comment="" />
+      <created>1522018177191</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1521499666744</updated>
-      <workItem from="1521499668115" duration="301000" />
-      <workItem from="1521499980277" duration="200000" />
-      <workItem from="1521500190865" duration="42000" />
-      <workItem from="1521500243738" duration="1515000" />
-      <workItem from="1521505798136" duration="65000" />
-      <workItem from="1521505878102" duration="53000" />
-      <workItem from="1521758503795" duration="6000" />
+      <updated>1522018177191</updated>
+      <workItem from="1522018178514" duration="3972000" />
+      <workItem from="1522023788833" duration="247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2182000" />
+    <option name="totallyTimeSpent" value="4219000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="195" y="0" width="1092" height="1049" extended-state="4" />
+    <frame x="0" y="87" width="1920" height="1049" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47705546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -217,11 +200,19 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$APPLICATION_HOME_DIR$/rubystubs24/object.rb</url>
+          <line>336</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/raindrops.rb">
+    <entry file="file://$PROJECT_DIR$/queen_attack.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -229,7 +220,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/raindrops.rb">
+    <entry file="file://$PROJECT_DIR$/../nucleotides/nucleotides.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -237,7 +228,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/raindrops.rb">
+    <entry file="file://$PROJECT_DIR$/../diff_two_square/diff_two_squares.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -245,7 +236,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/raindrops.rb">
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/object.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="347" column="8" lean-forward="false" selection-start-line="347" selection-start-column="8" selection-end-line="347" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nucleotides/nucleotides.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -253,7 +252,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/raindrops.rb">
+    <entry file="file://$PROJECT_DIR$/../diff_two_square/diff_two_squares.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -261,23 +260,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/raindrops.rb">
+    <entry file="file://$PROJECT_DIR$/queen_attack.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_script.rb" />
-    <entry file="file://$PROJECT_DIR$/67.rb" />
-    <entry file="file://$PROJECT_DIR$/bhjj.html" />
-    <entry file="file://$PROJECT_DIR$/jhbjh.js" />
-    <entry file="file://$PROJECT_DIR$/bhjjhb.css" />
-    <entry file="file://$PROJECT_DIR$/raindrops.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        <state relative-caret-position="760">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
