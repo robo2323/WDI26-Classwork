@@ -1,0 +1,8 @@
+<h1>Text Helpers</h1>
+
+<ul>
+    <% @numbers.each do |n| %>
+        <li style="background-color: <%= cycle('dodgerblue', 'tomato') %>"><%= n %></li>
+    <% end %>
+</ul>
+

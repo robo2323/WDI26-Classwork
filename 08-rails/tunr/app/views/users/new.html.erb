@@ -1,0 +1,24 @@
+<h1>Sign Up</h1>
+
+<% if @user.errors.any? %>
+    <ol>
+        <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg.capitalize %></li>
+            <% end %>
+    </ol>
+    <% end %>
+
+<%= form_for @user, :html => {:class => 'form-signin'} do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control' %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: 'form-control'  %>
+
+    <%= f.submit 'Sign Up!' %>
+
+    <!--password digest needed-->
+<% end %>

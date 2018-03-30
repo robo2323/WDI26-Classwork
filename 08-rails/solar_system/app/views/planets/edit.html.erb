@@ -1,0 +1,23 @@
+<h2>edit planet</h2>
+<form action="/planets/<%= @planet.id %>" method="post">
+    <label for="">Name</label>
+    <input type="text" name="planet[name]" placeholder="earth" value="<%= @planet.name %>">
+
+    <label for="">Image:</label>
+    <input type="url" name="planet[image]" value="<%= @planet.image %>">
+
+    <label for="">Orbit:</label>
+    <input type="number" name="planet[orbit]" placeholder="(in erath days)" value="<%= @planet.orbit %>">
+
+    <label for="">Mass:</label>
+    <input type="number" name="planet[mass]" placeholder="100000" value="<%= @planet.mass %>">
+
+    <label for="">Diameter:</label>
+    <input type="number" name="planet[diameter]" placeholder="200000" value="<%= @planet.diameter %>">
+
+    <label for="">Moons:</label>
+    <input type="number" name="planet[moons]" placeholder="4" value="<%= @planet.moons %>">
+
+    <button>Update Planet</button>
+
+</form>

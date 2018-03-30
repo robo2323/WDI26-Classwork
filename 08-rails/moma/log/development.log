@@ -1,0 +1,1755 @@
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6889560852001264395)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-03-28 01:51:52.668037"], ["updated_at", "2018-03-28 01:51:52.668037"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6889560852001264395)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5010.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "moma_development"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6889560852001264395)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArtists (20180328020331)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "name" text, "nationality" text, "dob" date, "period" text, "image" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180328020331"]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateWorks (20180328020341)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "works" ("id" bigserial primary key, "title" text, "year" text, "medium" text, "style" text, "image" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180328020341"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6889560852001264395)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Norman Lindsay"], ["nationality", "Australian"], ["dob", "1879-02-22"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/commons/3/32/Norman_Lindsay_1931.jpg"], ["created_at", "2018-03-28 03:18:38.623257"], ["updated_at", "2018-03-28 03:18:38.623257"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Russell Drysdale"], ["nationality", "Australian"], ["dob", "1912-02-07"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/commons/c/ca/Russell_Drysdale_Max_Dupain_1945.jpg"], ["created_at", "2018-03-28 03:18:38.628904"], ["updated_at", "2018-03-28 03:18:38.628904"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "James Gleeson"], ["nationality", "Australian"], ["dob", "1915-11-21"], ["period", "20th century"], ["image", "https://media.artgallery.nsw.gov.au/uploads/artists/James_Gleeson_nla.jpg"], ["created_at", "2018-03-28 03:18:38.631094"], ["updated_at", "2018-03-28 03:18:38.631094"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Sidney Nolan"], ["nationality", "Australian"], ["dob", "1917-04-22"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/commons/e/ef/Portrait_of_Sidney_Nolan.jpg"], ["created_at", "2018-03-28 03:18:38.633310"], ["updated_at", "2018-03-28 03:18:38.633310"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Arthur Boyd"], ["nationality", "Australian"], ["dob", "1920-07-24"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/en/9/98/Arthur_Boyd.jpg"], ["created_at", "2018-03-28 03:18:38.635481"], ["updated_at", "2018-03-28 03:18:38.635481"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jeffrey Smart"], ["nationality", "Australian"], ["dob", "1921-07-26"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/en/b/b0/Australian_artist_Jeffrey_Smart.jpg"], ["created_at", "2018-03-28 03:18:38.637614"], ["updated_at", "2018-03-28 03:18:38.637614"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Brett Whiteley"], ["nationality", "Australian"], ["dob", "1939-04-07"], ["period", "20th century"], ["image", "https://www.portrait.gov.au/files/b/9/4/f/i9331.jpg"], ["created_at", "2018-03-28 03:18:38.639864"], ["updated_at", "2018-03-28 03:18:38.639864"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 1]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 3]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 4]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 5]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 6]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 7]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Norman Lindsay"], ["nationality", "Australian"], ["dob", "1879-02-22"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/commons/3/32/Norman_Lindsay_1931.jpg"], ["created_at", "2018-03-28 03:19:14.539928"], ["updated_at", "2018-03-28 03:19:14.539928"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Russell Drysdale"], ["nationality", "Australian"], ["dob", "1912-02-07"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/commons/c/ca/Russell_Drysdale_Max_Dupain_1945.jpg"], ["created_at", "2018-03-28 03:19:14.544225"], ["updated_at", "2018-03-28 03:19:14.544225"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "James Gleeson"], ["nationality", "Australian"], ["dob", "1915-11-21"], ["period", "20th century"], ["image", "https://media.artgallery.nsw.gov.au/uploads/artists/James_Gleeson_nla.jpg"], ["created_at", "2018-03-28 03:19:14.546574"], ["updated_at", "2018-03-28 03:19:14.546574"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Sidney Nolan"], ["nationality", "Australian"], ["dob", "1917-04-22"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/commons/e/ef/Portrait_of_Sidney_Nolan.jpg"], ["created_at", "2018-03-28 03:19:14.548749"], ["updated_at", "2018-03-28 03:19:14.548749"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Arthur Boyd"], ["nationality", "Australian"], ["dob", "1920-07-24"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/en/9/98/Arthur_Boyd.jpg"], ["created_at", "2018-03-28 03:19:14.551028"], ["updated_at", "2018-03-28 03:19:14.551028"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jeffrey Smart"], ["nationality", "Australian"], ["dob", "1921-07-26"], ["period", "20th century"], ["image", "https://upload.wikimedia.org/wikipedia/en/b/b0/Australian_artist_Jeffrey_Smart.jpg"], ["created_at", "2018-03-28 03:19:14.553381"], ["updated_at", "2018-03-28 03:19:14.553381"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "nationality", "dob", "period", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Brett Whiteley"], ["nationality", "Australian"], ["dob", "1939-04-07"], ["period", "20th century"], ["image", "https://www.portrait.gov.au/files/b/9/4/f/i9331.jpg"], ["created_at", "2018-03-28 03:19:14.555519"], ["updated_at", "2018-03-28 03:19:14.555519"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Thieves Kitchen"], ["year", "1929"], ["medium", "etching"], ["style", "Romantic"], ["image", "https://content.ngv.vic.gov.au/retrieve.php?size=1280&type=image&vernonID=29145"], ["created_at", "2018-03-28 03:19:14.569453"], ["updated_at", "2018-03-28 03:19:14.569453"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Rabbiters"], ["year", "1947"], ["medium", "oil on canvas"], ["style", "Sun-burnt dinge"], ["image", "https://content.ngv.vic.gov.au/retrieve.php?size=1280&type=image&vernonID=5520"], ["created_at", "2018-03-28 03:19:14.572886"], ["updated_at", "2018-03-28 03:19:14.572886"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Darkening Stage"], ["year", "1991"], ["medium", "oil on canvas"], ["style", "Surrealist"], ["image", "https://content.ngv.vic.gov.au/col-images/api/EPUB001055/1280"], ["created_at", "2018-03-28 03:19:14.575125"], ["updated_at", "2018-03-28 03:19:14.575125"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Carcass"], ["year", "1953"], ["medium", "oil and enamel paint on composition board"], ["style", "Sun-burnt splendour"], ["image", "https://content.ngv.vic.gov.au/retrieve.php?size=1280&type=image&vernonID=57510"], ["created_at", "2018-03-28 03:19:14.577294"], ["updated_at", "2018-03-28 03:19:14.577294"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Bride Running Away"], ["year", "1957"], ["medium", "oil and tempera on composition board"], ["style", "Sun-burnt primitivism"], ["image", "http://www.abc.net.au/news/image/4197918-3x2-940x627.jpg"], ["created_at", "2018-03-28 03:19:14.579432"], ["updated_at", "2018-03-28 03:19:14.579432"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portrait of Clive James"], ["year", "1991 - 1992"], ["medium", "oil on canvas"], ["style", "Modernist"], ["image", "https://media.artgallery.nsw.gov.au/thumbnails/collection_images/2/276.1992%23%23S.jpg.505x464_q85.jpg"], ["created_at", "2018-03-28 03:19:14.581520"], ["updated_at", "2018-03-28 03:19:14.581520"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Naked Studio"], ["year", "1981"], ["medium", "1981"], ["style", "Impressionist"], ["image", "https://mona.net.au//media/37522/brett-whiteley-the-naked-studio-mona-01.jpg"], ["created_at", "2018-03-28 03:19:14.583728"], ["updated_at", "2018-03-28 03:19:14.583728"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-03-28 14:30:30 +1100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rob/.rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rob/.rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (5.1ms)
+Completed 200 OK in 25ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-28 14:31:20 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rob/.rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rob/.rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:31:27 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/artists"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:35:39 +1100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 549ms (Views: 541.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-28 14:35:46 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rob/.rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rob/.rvm/gems/ruby-2.4.1/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (1.3ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:36:03 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:42:37 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:42:38 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:42:40 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:42:41 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:42:41 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:42:41 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2018-03-28 14:42:42 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/new.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 4.8ms)
+
+
+  
+ActionView::Template::Error (You invoked render but did not give any of :partial, :template, :inline, :file, :plain, :html or :body option.):
+    2: 
+    3: 
+    4: # partials! Yay! see _form.html.erb
+    5: <%= render parital: 'form' %>
+  
+app/views/artists/new.html.erb:5:in `_app_views_artists_new_html_erb___4104056471223663461_69940202641580'
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:43:59 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:44:00 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2018-03-28 14:44:01 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (36.6ms)
+  Rendered artists/new.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 69ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:44:07 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:45:06 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 54ms (Views: 48.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/artists/8" for 127.0.0.1 at 2018-03-28 14:45:13 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 36ms (Views: 30.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:46:33 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 49ms (Views: 45.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/8" for 127.0.0.1 at 2018-03-28 14:46:36 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 14:46:43 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/11" for 127.0.0.1 at 2018-03-28 14:46:53 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 31.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/11/edit" for 127.0.0.1 at 2018-03-28 14:46:59 +1100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (3.1ms)
+  Rendered artists/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/artists/11" for 127.0.0.1 at 2018-03-28 14:47:09 +1100
+Processing by ArtistsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"35yu12ueJY+92swyibQ2RCpMSFz77En1JA/icOVZZwYOdqAW7qH2U8XdU3Q1/Eub9c6gIetu3IKTG4XYXyYYYw==", "artist"=>{"name"=>"Sidney Nolan!", "nationality"=>"Australian", "dob"=>"1917-04-22", "period"=>"20th century", "image"=>"https://upload.wikimedia.org/wikipedia/commons/e/ef/Portrait_of_Sidney_Nolan.jpg"}, "commit"=>"Update Artist", "id"=>"11"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "artists" SET "name" = $1, "updated_at" = $2 WHERE "artists"."id" = $3[0m  [["name", "Sidney Nolan!"], ["updated_at", "2018-03-28 03:47:09.125895"], ["id", 11]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/artists/11
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/artists/11" for 127.0.0.1 at 2018-03-28 14:47:09 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/11/edit" for 127.0.0.1 at 2018-03-28 14:47:11 +1100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (2.4ms)
+  Rendered artists/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/artists/11" for 127.0.0.1 at 2018-03-28 14:47:15 +1100
+Processing by ArtistsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wvMCIJfuahv6APw9j9a2lHsySyuiYc8ImKfX/LWUPoETGQzhEtG5x4IHY3sznstLpLCjVrLjWn8vs7BUD+tB5A==", "artist"=>{"name"=>"Sidney Nolan", "nationality"=>"Australian", "dob"=>"1917-04-22", "period"=>"20th century", "image"=>"https://upload.wikimedia.org/wikipedia/commons/e/ef/Portrait_of_Sidney_Nolan.jpg"}, "commit"=>"Update Artist", "id"=>"11"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "artists" SET "name" = $1, "updated_at" = $2 WHERE "artists"."id" = $3[0m  [["name", "Sidney Nolan"], ["updated_at", "2018-03-28 03:47:15.507348"], ["id", 11]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/artists/11
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/artists/11" for 127.0.0.1 at 2018-03-28 14:47:15 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:06:29 +1100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  Rendered works/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/storage/code/GA/classwork/08-rails/moma/app/views/works/index.html.erb:4: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+image_tag (work.image, :alt => work.name, :class => 'thumb')
+                              ^
+/mnt/storage/code/GA/classwork/08-rails/moma/app/views/works/index.html.erb:4: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+, :alt => work.name, :class => 'thumb'),work );@output_buffe
+                              ^
+/mnt/storage/code/GA/classwork/08-rails/moma/app/views/works/index.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+ame, :class => 'thumb'),work );@output_buffer.safe_append='
+                              ^
+/mnt/storage/code/GA/classwork/08-rails/moma/app/views/works/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/works/index.html.erb:4: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+app/views/works/index.html.erb:4: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+app/views/works/index.html.erb:4: syntax error, unexpected ')', expecting keyword_end
+app/views/works/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:07:30 +1100
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:07:40 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (25.0ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 4.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Work:0x007f7800d26f70>):
+    1: <h1>Works</h1>
+    2: 
+    3: <% @works.each do |work| %>
+    4:     <%= link_to image_tag(work.image, :alt => work.name, :class => 'thumb'),work %>
+    5: 
+    6: <% end %>
+  
+app/views/works/index.html.erb:4:in `block in _app_views_works_index_html_erb__4021685500340013379_27397300'
+app/views/works/index.html.erb:3:in `_app_views_works_index_html_erb__4021685500340013379_27397300'
+Processing by WorksController#index as HTML
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:07:40 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  [1m[36mWork Load (8.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.2ms)
+
+
+  Rendered works/index.html.erb within layouts/application (20.2ms)
+  
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 8.5ms)
+
+
+ActionView::Template::Error (undefined method `name' for #<Work:0x007f7800b42038>):
+  
+    1: <h1>Works</h1>
+    2: 
+    3: <% @works.each do |work| %>
+    4:     <%= link_to image_tag(work.image, :alt => work.name, :class => 'thumb'),work %>
+    5: 
+    6: <% end %>
+ActionView::Template::Error (undefined method `name' for #<Work:0x007f7800afa468>):
+  
+    1: <h1>Works</h1>
+    2: 
+    3: <% @works.each do |work| %>
+    4:     <%= link_to image_tag(work.image, :alt => work.name, :class => 'thumb'),work %>
+    5: 
+    6: <% end %>
+app/views/works/index.html.erb:4:in `block in _app_views_works_index_html_erb__4021685500340013379_70076692799060'
+app/views/works/index.html.erb:3:in `_app_views_works_index_html_erb__4021685500340013379_70076692799060'
+  
+app/views/works/index.html.erb:4:in `block in _app_views_works_index_html_erb__4021685500340013379_70076692799060'
+app/views/works/index.html.erb:3:in `_app_views_works_index_html_erb__4021685500340013379_70076692799060'
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:08:49 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 385ms (Views: 379.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 15:08:55 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (23.9ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @artist.name %></h1>
+    2: <ul>
+    3:     <li><%= @artist.nationality %></li>
+    4:     <% if @artist.dob.present? %>
+  
+app/views/works/show.html.erb:1:in `_app_views_works_show_html_erb__464612244825434318_28079100'
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 15:10:40 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 49ms (Views: 40.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/artists/8" for 127.0.0.1 at 2018-03-28 15:10:42 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 49ms (Views: 42.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/artists/8/edit" for 127.0.0.1 at 2018-03-28 15:10:44 +1100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (12.6ms)
+  Rendered artists/edit.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 52ms (Views: 39.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/artists/8" for 127.0.0.1 at 2018-03-28 15:10:47 +1100
+Processing by ArtistsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SEE06P86ellAUaS7Oa+l+QL3UGfEptWKzDLSNIkebIYSGIef36niqHRjVnRNv8Qp42/qllC4PcxIxNbjxpSEQQ==", "artist"=>{"name"=>"Norman Lindsay!", "nationality"=>"Australian", "dob"=>"1879-02-22", "period"=>"20th century", "image"=>"https://upload.wikimedia.org/wikipedia/commons/3/32/Norman_Lindsay_1931.jpg"}, "commit"=>"Update Artist", "id"=>"8"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "artists" SET "name" = $1, "updated_at" = $2 WHERE "artists"."id" = $3[0m  [["name", "Norman Lindsay!"], ["updated_at", "2018-03-28 04:10:47.896411"], ["id", 8]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/artists/8
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/artists/8" for 127.0.0.1 at 2018-03-28 15:10:47 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 15:10:52 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:10:57 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 15:10:59 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @artist.name %></h1>
+    2: <ul>
+    3:     <li><%= @artist.nationality %></li>
+    4:     <% if @artist.dob.present? %>
+  
+app/views/works/show.html.erb:1:in `_app_views_works_show_html_erb__464612244825434318_70076634035380'
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 15:13:44 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.4ms)
+
+
+  
+SyntaxError (/mnt/storage/code/GA/classwork/08-rails/moma/app/views/works/show.html.erb:3: syntax error, unexpected ',', expecting ')'
+k.title, :class => 'feature'), @work.image );@output_buffer.
+                              ^):
+  
+app/views/works/show.html.erb:3: syntax error, unexpected ',', expecting ')'
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 15:15:18 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works/1/edit" for 127.0.0.1 at 2018-03-28 15:15:27 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_form.html.erb (5.8ms)
+  Rendered works/edit.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @artist do |f| %>
+    2:     <%= f.label :name %>
+    3:     <%= f.text_field :name, autofocus: true %>
+    4: 
+  
+app/views/works/_form.html.erb:1:in `_app_views_works__form_html_erb___2391964645567235087_70076720995540'
+app/views/works/edit.html.erb:3:in `_app_views_works_edit_html_erb___547148988349821486_70076638141440'
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 15:15:27 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/works/1" for 127.0.0.1 at 2018-03-28 15:15:30 +1100
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for WorksController):
+  
+actionpack (5.1.5) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.5) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.5) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 15:19:39 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 41ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:19:41 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 45ms (Views: 42.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works/new" for 127.0.0.1 at 2018-03-28 15:19:43 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_form.html.erb (4.4ms)
+  Rendered works/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/works" for 127.0.0.1 at 2018-03-28 15:19:50 +1100
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for WorksController):
+  
+actionpack (5.1.5) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.5) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.5) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/works" for 127.0.0.1 at 2018-03-28 15:22:16 +1100
+Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7edzeVyXzXON0JNpTHYFnvngKfKEgQBdXebBLwjarnU2pKcwusgZYX59LuJuRpMTsCmv7C9cQ0uh3W93Vl/E0A==", "work"=>{"title"=>"bijbjbib", "year"=>"8908", "medium"=>"nkjjb", "style"=>"", "image"=>""}, "commit"=>"Create Work"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "bijbjbib"], ["year", "8908"], ["medium", "nkjjb"], ["style", ""], ["image", ""], ["created_at", "2018-03-28 04:22:16.056915"], ["updated_at", "2018-03-28 04:22:16.056915"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/works/8
+Completed 302 Found in 23ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/works/8" for 127.0.0.1 at 2018-03-28 15:22:16 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 41ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:22:19 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/8" for 127.0.0.1 at 2018-03-28 15:22:25 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works/8/edit" for 127.0.0.1 at 2018-03-28 15:22:26 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_form.html.erb (2.3ms)
+  Rendered works/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 42ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/works/8" for 127.0.0.1 at 2018-03-28 15:24:30 +1100
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for WorksController):
+  
+actionpack (5.1.5) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.5) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.5) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PATCH "/works/8" for 127.0.0.1 at 2018-03-28 15:25:25 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lh3mxmAat3JBI/TZPaRAc0EXooGna7CvJvwU3fdEs2qm0H8ge5ZbopkrdPWLFTdLTIcXCtgS1Q0KppP9YpAzmA==", "work"=>{"title"=>"stary night", "year"=>"van gogh", "medium"=>"oil", "style"=>"trippy", "image"=>"https://apod.nasa.gov/apod/image/0910/starrynight_vangogh_big.jpg"}, "commit"=>"Update Work", "id"=>"8"}
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `artist_params' for #<WorksController:0x007f77f9bafe50>
+Did you mean?  artist_path):
+  
+app/controllers/works_controller.rb:22:in `update'
+Started PATCH "/works/8" for 127.0.0.1 at 2018-03-28 15:25:38 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lh3mxmAat3JBI/TZPaRAc0EXooGna7CvJvwU3fdEs2qm0H8ge5ZbopkrdPWLFTdLTIcXCtgS1Q0KppP9YpAzmA==", "work"=>{"title"=>"stary night", "year"=>"van gogh", "medium"=>"oil", "style"=>"trippy", "image"=>"https://apod.nasa.gov/apod/image/0910/starrynight_vangogh_big.jpg"}, "commit"=>"Update Work", "id"=>"8"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "works" SET "title" = $1, "year" = $2, "medium" = $3, "style" = $4, "image" = $5, "updated_at" = $6 WHERE "works"."id" = $7[0m  [["title", "stary night"], ["year", "van gogh"], ["medium", "oil"], ["style", "trippy"], ["image", "https://apod.nasa.gov/apod/image/0910/starrynight_vangogh_big.jpg"], ["updated_at", "2018-03-28 04:25:38.326761"], ["id", 8]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/works/8
+Completed 302 Found in 29ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/works/8" for 127.0.0.1 at 2018-03-28 15:25:38 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:25:40 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works/new" for 127.0.0.1 at 2018-03-28 15:25:45 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_form.html.erb (5.8ms)
+  Rendered works/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:25:46 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/8" for 127.0.0.1 at 2018-03-28 15:25:47 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 59ms (Views: 52.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/works/8/edit" for 127.0.0.1 at 2018-03-28 15:25:48 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_form.html.erb (3.4ms)
+  Rendered works/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 58ms (Views: 53.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:25:52 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 64ms (Views: 60.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/8" for 127.0.0.1 at 2018-03-28 15:25:53 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 46ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/works/8" for 127.0.0.1 at 2018-03-28 15:25:56 +1100
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for WorksController):
+  
+actionpack (5.1.5) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.5) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.5) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.5) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.5) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.5) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/works/8" for 127.0.0.1 at 2018-03-28 15:26:46 +1100
+Processing by WorksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KZjptiXL9egqddyWgLbxgRqON4394Sxa2kJhLgKLYNvSg/LdtJ88RZHbz9qlAgn2iAiA9/rPfDVyyA6oTmhRrQ==", "id"=>"8"}
+  [1m[36mWork Load (0.1ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "works" WHERE "works"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/works
+Completed 302 Found in 19ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:26:46 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 15:26:54 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 50ms (Views: 43.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:26:55 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/6" for 127.0.0.1 at 2018-03-28 15:27:00 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/6/edit" for 127.0.0.1 at 2018-03-28 15:27:46 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mWork Load (0.1ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_form.html.erb (4.9ms)
+  Rendered works/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/works/new" for 127.0.0.1 at 2018-03-28 15:28:04 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  Rendered works/_form.html.erb (4.8ms)
+  Rendered works/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:28:25 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:32:12 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 86ms (Views: 82.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-28 15:32:58 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works"[0m
+  Rendered works/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 41ms (Views: 34.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-28 15:34:25 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY "works"."created_at" ASC[0m
+  Rendered works/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 48ms (Views: 43.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-28 15:34:26 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY "works"."created_at" ASC[0m
+  Rendered works/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 54ms (Views: 51.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-28 15:34:27 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY "works"."created_at" ASC[0m
+  Rendered works/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-28 15:34:27 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY "works"."created_at" ASC[0m
+  Rendered works/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:34:28 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY "works"."created_at" ASC[0m
+  Rendered works/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6889560852001264395)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddArtistIdToWorks (20180328044529)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "works" ADD "artist_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180328044529"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6889560852001264395)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" ORDER BY "works"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "updated_at" = $1, "artist_id" = $2 WHERE "works"."id" = $3[0m  [["updated_at", "2018-03-28 04:53:56.165314"], ["artist_id", 8], ["id", 1]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = $1[0m  [["artist_id", 8]]
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = $1[0m  [["artist_id", 8]]
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT  "works".* FROM "works" ORDER BY "works"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."title" = $1 LIMIT $2[0m  [["title", "Carcass"], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = $1 LIMIT $2[0m  [["name", "Arthur Boyd"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "works" SET "updated_at" = $1, "artist_id" = $2 WHERE "works"."id" = $3[0m  [["updated_at", "2018-03-28 04:56:50.620684"], ["artist_id", 12], ["id", 4]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = $1[0m  [["artist_id", 12]]
+Started GET "/works" for 127.0.0.1 at 2018-03-28 15:59:35 +1100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY "works"."created_at" ASC[0m
+  Rendered works/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 344ms (Views: 327.3ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 15:59:37 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 51ms (Views: 36.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 15:59:44 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 84ms (Views: 68.6ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/artists/9" for 127.0.0.1 at 2018-03-28 16:00:02 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 9], ["LIMIT", 1]]
+  Rendered artists/show.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 16:00:04 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/artists/10" for 127.0.0.1 at 2018-03-28 16:00:05 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mWork Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 10], ["LIMIT", 1]]
+  Rendered artists/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 43ms (Views: 37.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 16:00:09 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 61ms (Views: 58.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/12" for 127.0.0.1 at 2018-03-28 16:00:11 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 12], ["LIMIT", 1]]
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = $1[0m  [["artist_id", 12]]
+  Rendered artists/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 54ms (Views: 49.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/works/4" for 127.0.0.1 at 2018-03-28 16:00:21 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 43ms (Views: 38.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/works/4" for 127.0.0.1 at 2018-03-28 16:05:01 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  Rendered works/show.html.erb within layouts/application (169.7ms)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `work' for #<#<Class:0x007fa9b801f658>:0x007fa9a018b6f8>
+Did you mean?  @work):
+    3: <%= link_to image_tag(@work.image, :alt => @work.title, :class => 'feature'), @work.image %>
+    4: 
+    5: <ul>
+    6:     <% if work.artist.present? %>
+    7:         <li><%= link_to(@work.artist.name, @work.artist) %></li>
+    8:     <% end %>
+    9: </ul>
+  
+app/views/works/show.html.erb:6:in `_app_views_works_show_html_erb___4489966233560629217_70183458242940'
+Started GET "/works/4" for 127.0.0.1 at 2018-03-28 16:05:16 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 60ms (Views: 55.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/12" for 127.0.0.1 at 2018-03-28 16:05:19 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 12], ["LIMIT", 1]]
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = $1[0m  [["artist_id", 12]]
+  Rendered artists/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 46ms (Views: 41.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/works/4" for 127.0.0.1 at 2018-03-28 16:05:20 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 48ms (Views: 42.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/artists/12" for 127.0.0.1 at 2018-03-28 16:05:22 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mWork Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 12], ["LIMIT", 1]]
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = $1[0m  [["artist_id", 12]]
+  Rendered artists/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 58ms (Views: 50.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/works/4" for 127.0.0.1 at 2018-03-28 16:05:23 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWork Load (0.5ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 63ms (Views: 57.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/works/4/edit" for 127.0.0.1 at 2018-03-28 16:07:39 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_form.html.erb (40.2ms)
+  Rendered works/edit.html.erb within layouts/application (41.9ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    15:     <%= f.url_field :image %>
+    16: 
+    17:     <%= f.label :artist_id %>
+    18:     <%= f.select :artist_id %>
+    19: 
+    20: 
+    21: 
+  
+app/views/works/_form.html.erb:18:in `block in _app_views_works__form_html_erb__580845313530413820_70183308322580'
+app/views/works/_form.html.erb:1:in `_app_views_works__form_html_erb__580845313530413820_70183308322580'
+app/views/works/edit.html.erb:3:in `_app_views_works_edit_html_erb__2729281055087229535_70183308271880'
+Started GET "/works/4/edit" for 127.0.0.1 at 2018-03-28 16:08:11 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_form.html.erb (3.1ms)
+  Rendered works/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/4/edit" for 127.0.0.1 at 2018-03-28 16:09:00 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWork Load (0.9ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_form.html.erb (7.4ms)
+  Rendered works/edit.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    15:     <%= f.url_field :image %>
+    16: 
+    17:     <%= f.label :artist_id %>
+    18:     <%= f.select :artist_id %>
+    19: 
+    20:     <%= f.submit %>
+    21: 
+  
+app/views/works/_form.html.erb:18:in `block in _app_views_works__form_html_erb__580845313530413820_70183255978340'
+app/views/works/_form.html.erb:1:in `_app_views_works__form_html_erb__580845313530413820_70183255978340'
+app/views/works/edit.html.erb:3:in `_app_views_works_edit_html_erb__2729281055087229535_70183256017640'
+Started GET "/works/4/edit" for 127.0.0.1 at 2018-03-28 16:12:41 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_form.html.erb (2.8ms)
+  Rendered works/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 16:12:44 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY "works"."created_at" ASC[0m
+  Rendered works/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 37.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 16:12:46 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 54ms (Views: 46.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/artists/8" for 127.0.0.1 at 2018-03-28 16:12:48 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 8], ["LIMIT", 1]]
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = $1[0m  [["artist_id", 8]]
+  Rendered artists/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 47ms (Views: 42.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 16:12:51 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 47ms (Views: 41.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/works/1/edit" for 127.0.0.1 at 2018-03-28 16:12:58 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  Rendered works/_form.html.erb (3.6ms)
+  Rendered works/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 57ms (Views: 52.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 16:13:01 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY "works"."created_at" ASC[0m
+  Rendered works/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 40ms (Views: 35.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 16:13:03 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 48ms (Views: 42.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 16:13:05 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 43ms (Views: 38.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/8" for 127.0.0.1 at 2018-03-28 16:13:12 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mWork Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 8], ["LIMIT", 1]]
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = $1[0m  [["artist_id", 8]]
+  Rendered artists/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 53ms (Views: 46.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/artists/8" for 127.0.0.1 at 2018-03-28 16:17:05 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 8], ["LIMIT", 1]]
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = $1[0m  [["artist_id", 8]]
+  Rendered artists/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 41ms (Views: 35.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/artists/8" for 127.0.0.1 at 2018-03-28 16:17:07 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mWork Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 8], ["LIMIT", 1]]
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = $1[0m  [["artist_id", 8]]
+  Rendered artists/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/artists/8" for 127.0.0.1 at 2018-03-28 16:17:07 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 8], ["LIMIT", 1]]
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = $1[0m  [["artist_id", 8]]
+  Rendered artists/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/artists/8/edit" for 127.0.0.1 at 2018-03-28 16:17:10 +1100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (5.2ms)
+  Rendered artists/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 16:17:17 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY "works"."created_at" ASC[0m
+  Rendered works/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 16:17:17 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/works/1/edit" for 127.0.0.1 at 2018-03-28 16:17:21 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "artists"."name", "artists"."id" FROM "artists"[0m
+  Rendered works/_form.html.erb (9.9ms)
+  Rendered works/edit.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :include_blank:Symbol):
+    15:     <%= f.url_field :image %>
+    16: 
+    17:     <%= f.label :artist_id %>
+    18:     <%= f.select :artist_id, Artist.pluck(:name,:id), :include_blank %>
+    19: 
+    20:     <%= f.submit %>
+    21: 
+  
+app/views/works/_form.html.erb:18:in `block in _app_views_works__form_html_erb__580845313530413820_70183300087980'
+app/views/works/_form.html.erb:1:in `_app_views_works__form_html_erb__580845313530413820_70183300087980'
+app/views/works/edit.html.erb:3:in `_app_views_works_edit_html_erb__2729281055087229535_70183300259200'
+Started GET "/works/1/edit" for 127.0.0.1 at 2018-03-28 16:17:46 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.8ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "artists"."name", "artists"."id" FROM "artists"[0m
+  Rendered works/_form.html.erb (3.8ms)
+  Rendered works/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 42ms (Views: 36.7ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/works/1" for 127.0.0.1 at 2018-03-28 16:17:52 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PlVCH6jlOCWqepvL4pd1N2yPlZK+VKY/7uHziXbbWVTFTll0ObHxiBHUiIfHI41A/gki6Ll69lBGa5wPOjhoIg==", "work"=>{"title"=>"Thieves Kitchen", "year"=>"1929", "medium"=>"etching", "style"=>"Romantic", "image"=>"https://content.ngv.vic.gov.au/retrieve.php?size=1280&type=image&vernonID=29145", "artist_id"=>"13"}, "commit"=>"Update Work", "id"=>"1"}
+  [1m[36mWork Load (0.6ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "works" SET "artist_id" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["artist_id", 13], ["updated_at", "2018-03-28 05:17:52.606557"], ["id", 1]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/works/1
+Completed 302 Found in 12ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 16:17:52 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/works/1/edit" for 127.0.0.1 at 2018-03-28 16:17:56 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.3ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "artists"."name", "artists"."id" FROM "artists"[0m
+  Rendered works/_form.html.erb (7.3ms)
+  Rendered works/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 51ms (Views: 46.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/works/1" for 127.0.0.1 at 2018-03-28 16:18:06 +1100
+Processing by WorksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dy47WsQ8MiP83LSiaI3Tj9Coqc+O59JoJvlrnxQc+XEVU5GD95WegDhVA4ZpH6rn8BfmF1MGYAv8BPKQ32eCkw==", "work"=>{"title"=>"Thieves Kitchen", "year"=>"1929", "medium"=>"etching", "style"=>"Romantic", "image"=>"https://content.ngv.vic.gov.au/retrieve.php?size=1280&type=image&vernonID=29145", "artist_id"=>"8"}, "commit"=>"Update Work", "id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "works" SET "artist_id" = $1, "updated_at" = $2 WHERE "works"."id" = $3[0m  [["artist_id", 8], ["updated_at", "2018-03-28 05:18:06.957198"], ["id", 1]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/works/1
+Completed 302 Found in 12ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 16:18:06 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2018-03-28 16:18:12 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (7.6ms)
+  Rendered artists/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 16:18:16 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/8" for 127.0.0.1 at 2018-03-28 16:18:25 +1100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mWork Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "works" WHERE "works"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 8], ["LIMIT", 1]]
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" WHERE "works"."artist_id" = $1[0m  [["artist_id", 8]]
+  Rendered artists/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 53ms (Views: 49.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/artists/8/edit" for 127.0.0.1 at 2018-03-28 16:18:34 +1100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (7.2ms)
+  Rendered artists/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 48ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists/8/edit" for 127.0.0.1 at 2018-03-28 16:20:28 +1100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (3.0ms)
+  Rendered artists/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/works" for 127.0.0.1 at 2018-03-28 16:20:30 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY "works"."created_at" ASC[0m
+  Rendered works/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/works/1" for 127.0.0.1 at 2018-03-28 16:20:31 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.4ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/works/1/edit" for 127.0.0.1 at 2018-03-28 16:20:38 +1100
+Processing by WorksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering works/edit.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "artists"."name", "artists"."id" FROM "artists"[0m
+  Rendered works/_form.html.erb (7.7ms)
+  Rendered works/edit.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 60ms (Views: 56.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/works/new" for 127.0.0.1 at 2018-03-28 16:20:44 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "artists"."name", "artists"."id" FROM "artists"[0m
+  Rendered works/_form.html.erb (6.9ms)
+  Rendered works/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 51ms (Views: 46.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-28 16:55:40 +1100
+Processing by WorksController#index as HTML
+  Rendering works/index.html.erb within layouts/application
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT "works".* FROM "works" ORDER BY "works"."created_at" ASC[0m
+  Rendered works/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/works/new" for 127.0.0.1 at 2018-03-28 16:55:46 +1100
+Processing by WorksController#new as HTML
+  Rendering works/new.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "artists"."name", "artists"."id" FROM "artists"[0m
+  Rendered works/_form.html.erb (11.5ms)
+  Rendered works/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/works" for 127.0.0.1 at 2018-03-28 16:56:01 +1100
+Processing by WorksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ICOUxTkmNZqhPYGuI+2SBiXB6B+d5fh3ctBECfzIInD7YECM33nhiFKQPCUB3QSLbAhuATY4u2GO6+pRok1I1Q==", "work"=>{"title"=>"", "year"=>"", "medium"=>"", "style"=>"", "image"=>"", "artist_id"=>"14"}, "commit"=>"Create Work"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "works" ("title", "year", "medium", "style", "image", "created_at", "updated_at", "artist_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", ""], ["year", ""], ["medium", ""], ["style", ""], ["image", ""], ["created_at", "2018-03-28 05:56:01.834712"], ["updated_at", "2018-03-28 05:56:01.834712"], ["artist_id", 14]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/works/9
+Completed 302 Found in 11ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/works/9" for 127.0.0.1 at 2018-03-28 16:56:01 +1100
+Processing by WorksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mWork Load (0.2ms)[0m  [1m[34mSELECT  "works".* FROM "works" WHERE "works"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering works/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered works/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2018-03-28 16:56:06 +1100
+Processing by ArtistsController#new as HTML
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (3.9ms)
+  Rendered artists/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2018-03-28 16:56:07 +1100
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 40ms (Views: 34.7ms | ActiveRecord: 1.3ms)
+
+

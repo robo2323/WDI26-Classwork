@@ -1,0 +1,7 @@
+<h1>Works</h1>
+
+<% @works.each do |work| %>
+
+    <%= link_to image_tag(work.image, :alt => work.title, :class => 'thumb'), work %>
+
+<% end %>
