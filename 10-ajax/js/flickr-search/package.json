@@ -1,0 +1,25 @@
+{
+  "name": "flickr-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-env": "^2.4.1",
+    "eslint": "^4.18.1",
+    "eslint-config-recommended": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d js",
+    "watch": "babel --watch src -d js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

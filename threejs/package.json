@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-runtime": "^6.26.0",
+    "node-sass": "^4.9.0"
+  },
+  "dependencies": {
+    "dat.gui": "^0.7.1",
+    "three": "^0.92.0",
+    "three-orbitcontrols": "^2.0.0"
+  },
+  "name": "threejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

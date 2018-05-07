@@ -1,0 +1,12 @@
+html {
+  font-size: 62.5%;
+}
+input[type="submit"]{
+  cursor: pointer;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: $m-size;
+  background: $blue;
+  color: $white;
+}

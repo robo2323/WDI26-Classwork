@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Vue intro</title>
+</head>
+
+<body>
+    <div id="app">{{message}}</div>
+    <div id="app2">
+        <span v-bind:title="message">hover ove me</span>
+    </div>
+    <div id="app3">
+        <input v-model="h1message" type="text">
+        <h1 id="h1message">{{h1message}}</h1>
+    </div>
+    <div id="app4">
+        <label>hide</label>
+        <input v-model="seen" type="checkbox" />
+        <span v-if="seen">kdckdcceckelcn</span>
+ 
+    </div>
+    <div id="app5">
+        <ol>
+            <li v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ol>
+    </div>
+    <div id="app6">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">reverse</button>
+    </div>
+
+
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
